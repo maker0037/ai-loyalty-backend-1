@@ -1,0 +1,163 @@
+{
+  "CUST_001": {
+    "customer_id": "CUST_001",
+    "age": 32,
+    "city": "Delhi",
+    "signup_channel": "website",
+    "preferred_channel": "sms",
+    "loyalty_tier": "gold"
+  },
+  "CUST_002": {
+    "customer_id": "CUST_002",
+    "age": 25,
+    "city": "Mumbai",
+    "signup_channel": "mobile_app",
+    "preferred_channel": "email",
+    "loyalty_tier": "silver"
+  },
+  "CUST_003": {
+    "customer_id": "CUST_003",
+    "age": 45,
+    "city": "Bangalore",
+    "signup_channel": "referral",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "platinum"
+  },
+  "CUST_004": {
+    "customer_id": "CUST_004",
+    "age": 28,
+    "city": "Hyderabad",
+    "signup_channel": "mobile_app",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "bronze"
+  },
+  "CUST_005": {
+    "customer_id": "CUST_005",
+    "age": 35,
+    "city": "Pune",
+    "signup_channel": "in-store",
+    "preferred_channel": "sms",
+    "loyalty_tier": "gold"
+  },
+  "CUST_006": {
+    "customer_id": "CUST_006",
+    "age": 52,
+    "city": "Chennai",
+    "signup_channel": "social_media",
+    "preferred_channel": "email",
+    "loyalty_tier": "silver"
+  },
+  "CUST_007": {
+    "customer_id": "CUST_007",
+    "age": 30,
+    "city": "Ahmedabad",
+    "signup_channel": "website",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "bronze"
+  },
+  "CUST_008": {
+  "customer_id": "CUST_008",
+  "age": 40,
+  "city": "Delhi",
+  "signup_channel": "website",
+  "preferred_channel": "sms",
+  "loyalty_tier": "gold"
+  },
+
+  "CUST_009": {
+    "customer_id": "CUST_009",
+    "age": 22,
+    "city": "Kolkata",
+    "signup_channel": "mobile_app",
+    "preferred_channel": "push",
+    "loyalty_tier": "bronze"
+  },
+  "CUST_010": {
+    "customer_id": "CUST_010",
+    "age": 48,
+    "city": "Lucknow",
+    "signup_channel": "in-store",
+    "preferred_channel": "email",
+    "loyalty_tier": "platinum"
+  },
+  "CUST_011": {
+    "customer_id": "CUST_011",
+    "age": 31,
+    "city": "Jaipur",
+    "signup_channel": "website",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "silver"
+  },
+  "CUST_012": {
+    "customer_id": "CUST_012",
+    "age": 27,
+    "city": "Chandigarh",
+    "signup_channel": "social_media",
+    "preferred_channel": "sms",
+    "loyalty_tier": "gold"
+  },
+  "CUST_013": {
+    "customer_id": "CUST_013",
+    "age": 55,
+    "city": "Indore",
+    "signup_channel": "referral",
+    "preferred_channel": "email",
+    "loyalty_tier": "platinum"
+  },
+  "CUST_014": {
+    "customer_id": "CUST_014",
+    "age": 34,
+    "city": "Surat",
+    "signup_channel": "website",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "gold"
+  },
+  "CUST_015": {
+    "customer_id": "CUST_015",
+    "age": 24,
+    "city": "Bhopal",
+    "signup_channel": "mobile_app",
+    "preferred_channel": "push",
+    "loyalty_tier": "bronze"
+  },
+  "CUST_016": {
+    "customer_id": "CUST_016",
+    "age": 42,
+    "city": "Nagpur",
+    "signup_channel": "in-store",
+    "preferred_channel": "sms",
+    "loyalty_tier": "silver"
+  },
+  "CUST_017": {
+    "customer_id": "CUST_017",
+    "age": 29,
+    "city": "Visakhapatnam",
+    "signup_channel": "social_media",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "bronze"
+  },
+  "CUST_018": {
+    "customer_id": "CUST_018",
+    "age": 38,
+    "city": "Patna",
+    "signup_channel": "website",
+    "preferred_channel": "email",
+    "loyalty_tier": "gold"
+  },
+  "CUST_019": {
+    "customer_id": "CUST_019",
+    "age": 46,
+    "city": "Ludhiana",
+    "signup_channel": "referral",
+    "preferred_channel": "sms",
+    "loyalty_tier": "platinum"
+  },
+  "CUST_020": {
+    "customer_id": "CUST_020",
+    "age": 33,
+    "city": "Agra",
+    "signup_channel": "mobile_app",
+    "preferred_channel": "whatsapp",
+    "loyalty_tier": "silver"
+  }
+}
