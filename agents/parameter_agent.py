@@ -1,6 +1,8 @@
 # agents/parameter_agent.py
 
 from agents.campaign_economics import AVG_ORDER_VALUE_DEFAULT
+from state.learning_store import get_learning
+
 
 
 def recommend_campaign_parameters(strategy: dict) -> dict:
@@ -40,6 +42,11 @@ def recommend_campaign_parameters(strategy: dict) -> dict:
     elif campaign_type == "informational":
         points = 0
         duration_days = 5
+
+    learning = get_learning(strategy["segment_id"])
+    if learning and learning["direction"] == "negative":
+        points = max(points - 10, 0)
+
 
     return {
         "points": points,

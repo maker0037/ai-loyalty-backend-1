@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-01-16T02:10:22.251452",
+    "event_type": "CAMPAIGN_LAUNCHED",
+    "payload": {
+      "campaign_id": "CMP_1F7EDA",
+      "segment_id": "S5",
+      "launch_mode": "HUMAN_APPROVED",
+      "channel": "email",
+      "audience_size": 2,
+      "projected_roi": -1.0
+    }
+  }
+]

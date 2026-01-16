@@ -2,37 +2,33 @@
 
 from fastapi import APIRouter
 
-from services.campaign_service import get_ai_campaign_recommendations
-from agents.behavior_change_agent import detect_behavior_changes
-from agents.segmentation_agent import segment_customers
+from agents.orchestrator import generate_campaign_recommendations
 
 router = APIRouter(prefix="/ai", tags=["AI"])
 
 
-@router.get("/campaign-recommendations")
-def campaign_recommendations():
+@router.get("/suggestions")
+def ai_suggestions():
     """
-    Main AI endpoint.
-    Returns fully assembled, UI-ready campaigns.
+    UI-facing AI Intelligence Hub endpoint.
     """
-    return get_ai_campaign_recommendations()
+    campaigns = generate_campaign_recommendations()
+    items = []
 
+    for c in campaigns:
+        items.append({
+            "segment_id": c["segment_id"],
+            "detected_behavior": {
+                "label": c["campaign_type"].replace("_", " ").title(),
+                "type": c["campaign_type"],
+            },
+            "suggested_campaign": {
+                "name": c["segment"],
+                "channel": c["channel"],
+            },
+            "estimated_roi": c["roi_estimation"]["estimated_roi"],
+        })
 
-@router.get("/behavior-signals")
-def behavior_signals():
-    """
-    Explainability endpoint.
-    Shows raw detected behavior changes per customer.
-    """
     return {
-        "signals": detect_behavior_changes()
+        "items": items
     }
-
-
-@router.get("/segments")
-def segmentation_summary():
-    """
-    Returns customer segmentation summary.
-    Useful for analytics & drill-downs.
-    """
-    return segment_customers()

@@ -1,0 +1,34 @@
+{
+  "CMP_1F7EDA": {
+    "campaign_id": "CMP_1F7EDA",
+    "segment_id": "S5",
+    "name": "New Customers",
+    "channel": "email",
+    "audience_size": 2,
+    "estimated_cost": 0.2,
+    "estimated_response_rate": 35,
+    "projected_roi": -1.0,
+    "message": "Here's a welcome email to loyalty members to reinforce value and encourage re-engagement:\n\nSubject: You're Now a Part of Our Community\n\nDear [Name],\n\nA warm welcome to our loyalty program! As a valued member, you'll enjoy exclusive benefits, early access to new products, and personalized rewards. Explore our offers and start earning today. Thank you for joining us!\n\nBest, [Brand Name]",
+    "cta": "Shop Now",
+    "status": "LIVE",
+    "launch_mode": "HUMAN_APPROVED",
+    "created_at": "2026-01-16T02:10:22.250862",
+    "launched_at": "2026-01-16T02:10:22.250862",
+    "metrics": {
+      "participants": 1,
+      "revenue": 1200.0,
+      "actual_roi": 5999.0,
+      "last_updated": "just_now",
+      "explanation": "Metrics updated using simulated engagement events."
+    },
+    "explanation": {
+      "why_launched": "Approved by human after AI recommendation",
+      "ai_projected_roi": -1.0,
+      "estimated_response_rate": 35
+    },
+    "execution": {
+      "status": "queued",
+      "provider": "email_stub"
+    }
+  }
+}

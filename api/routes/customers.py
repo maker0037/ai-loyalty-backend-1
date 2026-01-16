@@ -1,33 +1,31 @@
 # api/routes/customers.py
 
-from fastapi import APIRouter, HTTPException
-from state.customer_store import add_customer, get_all_customers
+from fastapi import APIRouter
+from state.customer_store import get_all_customers
 
-router = APIRouter(prefix="/customers", tags=["Customers"])
+router = APIRouter(tags=["Customers"])
+
+
 
 
 @router.get("/")
-def list_customers():
-    """
-    Return all customers currently loaded in memory.
-    Used by UI & AI pipeline.
-    """
+def list_members():
+    customers = get_all_customers()
+    items = []
+
+    for c in customers:
+        items.append({
+            "id": c["customer_id"],
+            "creation_date": c["created_at"],
+            "firstname": c["first_name"],
+            "lastname": c["last_name"],
+            "mobile_number": c["mobile_number"],
+            "tier": c["loyalty_tier"].upper(),
+            "points_balance": c["points_balance"],
+            "status": "active" if c["enabled"] else "inactive",
+        })
+
     return {
-        "count": len(get_all_customers()),
-        "customers": get_all_customers(),
+        "count": len(items),
+        "items": items
     }
-
-
-@router.post("/")
-def create_customer(customer: dict):
-    """
-    Add a new customer (manual UI entry or demo).
-    """
-    try:
-        add_customer(customer)
-        return {
-            "status": "success",
-            "customer_id": customer["customer_id"],
-        }
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))

@@ -1,12 +1,10 @@
-# state/purchase_store.py
-
 from typing import List
 import json
 import os
+from uuid import uuid4
 
 DATA_PATH = "data/snapshots/purchases.json"
 
-# In-memory store
 PURCHASE_STORE: List[dict] = []
 
 REQUIRED_FIELDS = {
@@ -18,9 +16,6 @@ REQUIRED_FIELDS = {
 
 
 def load_purchases() -> List[dict]:
-    """
-    Load purchases from snapshot file into memory.
-    """
     PURCHASE_STORE.clear()
 
     if not os.path.exists(DATA_PATH):
@@ -30,6 +25,12 @@ def load_purchases() -> List[dict]:
         data = json.load(f)
 
     for purchase in data:
+        # ---- UI defaults ----
+        purchase.setdefault("transaction_id", f"TXN_{uuid4().hex[:6].upper()}")
+        purchase.setdefault("store_name", "Unknown Store")
+        purchase.setdefault("pos_type", "Retail")
+        purchase.setdefault("card_number", "XXXX-XXXX-XXXX")
+
         PURCHASE_STORE.append(purchase)
 
     return PURCHASE_STORE
@@ -45,6 +46,11 @@ def add_purchase(purchase: dict):
     missing = REQUIRED_FIELDS - purchase.keys()
     if missing:
         raise ValueError(f"Missing fields: {missing}")
+
+    purchase.setdefault("transaction_id", f"TXN_{uuid4().hex[:6].upper()}")
+    purchase.setdefault("store_name", "Unknown Store")
+    purchase.setdefault("pos_type", "Retail")
+    purchase.setdefault("card_number", "XXXX-XXXX-XXXX")
 
     PURCHASE_STORE.append(purchase)
     persist_purchases()
